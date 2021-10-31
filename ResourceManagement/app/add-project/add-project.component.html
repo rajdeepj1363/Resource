@@ -1,0 +1,21 @@
+<div>
+    <h4 class="title">Add Project</h4>
+</div>
+
+    <form [formGroup]="projectForm" (ngSubmit)="addProject()">
+  
+            <label for="project_name">Name: </label>
+            <input id="user_name" type="text" formControlName="project_name"><br><br>
+
+            <label for="project_description">Description: </label>
+            <input id="employee_mobile" type="text" formControlName="project_description"><br><br>
+           
+              <label for="project_start_date">Start Date: </label>
+            <input id="employee_added_date" type="text" formControlName="project_start_date"><br><br>
+              
+
+    
+      <button type="button" class="btn btn-light" (click)="cancel(); ">Cancel</button>
+      <button type="button" class="btn btn-light" >Submit</button>
+   
+    </form>

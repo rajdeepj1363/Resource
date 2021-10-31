@@ -1,0 +1,28 @@
+<div>
+    <h4 class="title">Add Item</h4>
+</div>
+
+ <div class="modal-header">
+      <h4 class="modal-title">Add Allocation</h4>
+      <button type="button" class="close" aria-label="Close" (click)="cancel(); ">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <form [formGroup]="itemsForm" (ngSubmit)="addItem()">
+    <div class="modal-body">
+        <div>
+            <label for="item_name">Name: </label>
+            <input id="user_name" type="text" formControlName="item_name"><br><br>
+            <label for="item_type">Type: </label>
+            <input id="user_email" type="text" formControlName="item_type"><br><br>
+            <label for="item_description">Description: </label>
+            <input id="employee_mobile" type="text" formControlName="item_description"><br><br>
+            <label for="item_cost">Cost: </label>
+            <input id="employee_project" type="text" formControlName="item_cost"><br><br>
+          </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="cancel(); ">Cancel</button>
+      <button type="button" class="btn btn-light" >Submit</button>
+    </div>
+    </form>

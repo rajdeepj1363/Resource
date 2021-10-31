@@ -1,0 +1,44 @@
+<html>
+
+<body>
+	<div>
+		<div class="btn-tray">
+			<button id="new_allocation" class="btn btn-primary" (click)="openAllocation()">New Allocation</button>&nbsp;
+			<button id="export" class="btn btn-primary" (click)="export()">Export</button>
+		</div>
+
+		<div class="header">
+			<h1>{{title}}</h1>
+		</div>
+		<div>
+			<table class="allocation-table">
+				<thead>
+					<tr>
+						<th>Allocation Id</th>
+						<th>Allocated To</th>
+						<th>Item</th>
+						<th>Project</th>
+						<th>Allocation Date</th>
+						<th>PO No</th>
+						<th>PO Amt</th>
+						<th>Life Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let list of allocationData">
+                        <td>{{list.allocation_id}}</td>
+						<td>{{list.allocated_to}}</td>
+						<td>{{list.item}}</td>
+						<td>{{list.project}}</td>
+                        <td>{{list.allocation_date}}</td>
+                        <td>{{list.po_no}}</td>
+                        <td>{{list.po_amount}}</td>
+                        <td>{{list.start_date}} to {{list.end_date}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

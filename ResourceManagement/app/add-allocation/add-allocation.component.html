@@ -1,0 +1,32 @@
+<div>
+    <h4 class="title">Add Allocation</h4>
+
+<form [formGroup]="allocationForm" (ngSubmit)="addAllocation()">
+
+      
+                <label for="user_name">Allocated To: </label>
+                <input id="user_name" type="text" formControlName="allocated_to"><br><br>
+                <label for="user_email">Item: </label>
+                <input id="user_email" type="text" formControlName="item"><br><br>
+                <label for="employee_mobile">Description: </label>
+                <input id="employee_mobile" type="text" formControlName="item_description"><br><br>
+                <label for="employee_project">Project: </label>
+                <input id="employee_project" type="text" formControlName="project"><br><br>
+                <label for="employee_birth_date">Allocation Date: </label>
+                <input id="employee_birth_date" type="date" formControlName="allocation_date"><br><br>
+                <label for="employee_added_date">PO Number: </label>
+                <input id="employee_added_date" type="text" formControlName="po_no"><br><br>
+                <label for="employee_added_date">PO Ammount: </label>
+                <input id="employee_added_date" type="number" formControlName="po_amount"><br><br>
+                <label for="employee_added_date">Start Date: </label>
+                <input id="employee_added_date" type="date" formControlName="start_date"><br><br>
+                <label for="employee_added_date">End Date: </label>
+                <input id="employee_added_date" type="date" formControlName="end_date"><br><br>
+          
+
+    
+      <button type="button" class="btn btn-light" (click)="cancel(); ">Cancel</button>
+      <button type="button" class="btn btn-light"  >Submit</button>
+   
+        </form>
+</div>
